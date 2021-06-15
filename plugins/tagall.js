@@ -11,13 +11,13 @@ const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('tagall');
 
-async function checkImAdmin(message, user = message.client.user.jid) {
+/*async function checkImAdmin(message, user = message.client.user.jid) {
     var grup = await message.client.groupMetadata(message.jid);
     var sonuc = grup['participants'].map((member) => {
         if (member.jid.split('@')[0] === user.split('@')[0] && member.isAdmin) return true; else; return false;
     });
     return sonuc.includes(true);
-}
+}*/
 
 Asena.addCommand({pattern: 'tagall ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
 
